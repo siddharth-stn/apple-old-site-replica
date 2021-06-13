@@ -236,20 +236,20 @@ main {
 }
 
 main .display1 {
-  background-image: url("/images/display1image.jpeg");
+  background-image: url("./images/display1image.jpeg");
   background-size: cover;
 }
 
 main .display2 {
-  background-image: url("/images/display2image.jpeg");
+  background-image: url("./images/display2image.jpeg");
   background-size: cover;
 }
 main .display3 {
-  background-image: url("/images/display3image.jpeg");
+  background-image: url("./images/display3image.jpeg");
   background-size: cover;
 }
 main .display4 {
-  background-image: url("/images/display4image.jpeg");
+  background-image: url("./images/display4image.jpeg");
   background-size: cover;
   margin-right: 0;
 }
