@@ -129,34 +129,103 @@ table {
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* * Actual Styling Code Starts here    -------> */
 
 header {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-image: url("https://web.archive.org/web/20140228114747im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg");
   background-size: stretch;
   background-position: center bottom;
 
   min-height: 538px;
   max-width: 1440px;
+  min-width: 1010px;
   margin: 0 auto;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana,
+    sans-serif;
+}
+
+header nav {
+  margin-top: 81px;
+  margin-bottom: 30px;
 }
 
 header nav ul {
-  position: absolute;
-  outline: 2px solid red;
   display: flex;
-  /* * I have to start here by adjusting the width to perfection */
-  width: 71%;
-  left: 13%;
-  top: 90px;
+  width: 970px;
   justify-content: space-between;
+
+  border: 1px solid rgb(73, 59, 49);
+  border-radius: 5px;
+  color: white;
+  background-image: linear-gradient(
+    rgb(131, 131, 131),
+    rgb(120, 120, 120) 50%,
+    rgb(106, 106, 106) 50%
+  );
 }
 
-@media (min-width: 1440px) {
+header ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 0;
+  border-right: 1px solid rgb(59, 59, 49);
+  color: rgb(230, 230, 230);
+  font-size: 0.75rem;
+  flex-grow: 1;
+}
+
+header ul li:last-child {
+  flex-grow: 0;
+  width: 130px;
+}
+
+header ul li:last-child input {
+  width: 100px;
+}
+
+header li input {
+  outline: none;
+  background: linear-gradient(
+    rgb(131, 131, 131),
+    rgb(120, 120, 120) 50%,
+    rgb(106, 106, 106) 50%
+  );
+  border-radius: 30px;
+}
+
+
+header li input:focus {
+  background: white;
+  padding: 1px 10px;
+  /* flex-grow: 1; */
+  width: 200px;
+}
+
+header .headerContent {
+  color: white;
+}
+
+.headerContent .large,
+.headerContent .medium {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 1365px) {
+  header {
+    /* min-width: 1000px; */
+  }
+}
+
+@media (min-width: 1367px) {
   header {
     min-height: 680px;
   }
